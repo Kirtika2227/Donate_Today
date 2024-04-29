@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        li:hover {
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Search Results</h1>
+        <ul>
+            {% for ngo in ngos %}
+            <li>NGO Name: {{ ngo['NGO Name'] }}, Location: {{ ngo['Location'] }}, Needs: {{ ngo['Needs'] }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
